@@ -1,12 +1,10 @@
-import { Iconv } from "iconv";
+import iconv from "iconv-lite";
 import axios, { AxiosResponse } from "axios";
 import { htmlToText } from "html-to-text";
 import Joi from "joi";
 
-const iconv = new Iconv("ISO-8859-1", "UTF-8");
-
 const decode = (response: AxiosResponse<string>) => {
-  const buffer = iconv.convert(response.data);
+  const buffer = iconv.decode(response.data as unknown as Buffer, "ISO-8859-1");
 
   response.data = buffer.toString();
 

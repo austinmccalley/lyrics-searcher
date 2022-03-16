@@ -1,6 +1,6 @@
 {
     "name": "lyrics-searcher",
-    "version": "1.0.58",
+    "version": "1.0.59",
     "description": "A Simple Lyrics Finder That Just Works",
     "main": "dist/src/lib/index.js",
     "types": "types/src/lib/index.d.ts",
@@ -73,7 +73,7 @@
         "axios": "^0.21.1",
         "commander": "^7.2.0",
         "html-to-text": "^8.0.0",
-        "iconv": "^3.0.0",
+        "iconv-lite": "^0.6.3",
         "joi": "^17.4.0"
     }
 }
